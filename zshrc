@@ -78,6 +78,7 @@ alias gb="git branch"
 alias gsb='for k in `git branch|perl -pe "s/^..//"`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r'
 alias gdi="git diff"
 alias gdc="git diff --cached"
+compdef _git gfp=git-push
 
 # rgrep
 function rgrep() { grep -r $2 --include=\*.{erb,rb,js,scss} $1 . }
