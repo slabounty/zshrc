@@ -112,3 +112,6 @@ alias todo='~/.tmux/todos.sh'
 export EDITOR="vim"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
