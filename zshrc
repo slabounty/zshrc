@@ -78,6 +78,7 @@ alias gb="git branch"
 alias gsb='for k in `git branch|perl -pe "s/^..//"`;do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k|head -n 1`\\t$k;done|sort -r'
 alias gdi="git diff"
 alias gdc="git diff --cached"
+compdef _git gfp=git-push
 
 # rgrep
 function rgrep() { grep -r $2 --include=\*.{erb,rb,js,scss} $1 . }
@@ -87,6 +88,7 @@ alias be='bundle exec'
 alias bec='be cucumber'
 alias ber='be rspec --color'
 alias beg='be guard'
+alias cber='COVERAGE=true ber'
 
 # Zeus aliases
 alias z='zeus'
@@ -95,18 +97,6 @@ alias zr='z rspec --color'
 
 # Rails Test Reset
 alias betr='RAILS_ENV=test bundle exec rake db:migrate:reset'
-
-# Tmux session aliases.
-alias rpp_web_app='~/code/rpp_web_app/stmux'
-alias cyph='~/.tmux/cyph.sh'
-alias octopusci='~/.tmux/octopusci.sh'
-alias octopusci-head='~/.tmux/octopusci-head.sh'
-alias ustackit='~/.tmux/ustackit.sh'
-alias thrift_jms_map_json='~/.tmux/thrift_jms_map_json.sh'
-alias rlapi_ruby='~/.tmux/rlapi_ruby.sh'
-alias replywise_reachlocal_event_consumer='~/.tmux/replywise_reachlocal_event_consumer.sh'
-alias wrap_in_module='~/.tmux/wrap_in_module.sh'
-alias todo='~/.tmux/todos.sh'
 
 # My default editor settings
 export EDITOR="vim"
